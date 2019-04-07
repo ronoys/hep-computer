@@ -1,17 +1,3 @@
-'''
-import matplotlib
-
-data = pd.read_csv("C:/Users/ronoy/OneDrive/Documents/Hepatitis/data.csv")
-
-data.head()
-data.describe()
-data.shape
-data['age'].mean()
-data.plot.bar(x='age',y='')
-data.plot.bar(x='anorexia',y=(data['anorexia'] == 'True')
-data.plot.bar(x='protime')
-'''
-
 # To do the following you need to run command: pip install pybrain
 from pybrain.datasets.classification import ClassificationDataSet
 # below line can be replaced with the algorithm of choice e.g.
@@ -36,7 +22,9 @@ for line in file:
             storageList.append(0)
         else:
             storageList.append(i)
+
     d.addSample(storageList,[classification])
+    print storageList
 
 # create dataset
 '''
@@ -56,4 +44,4 @@ ga = GA(d.evaluateModuleMSE, nn, minimize=True)
 for i in range(100):
     nn = ga.learn(0)[0]
 
-print nn.activate([181, 80])
+print nn.activate([41,female,True,True,True,False,False,True,True,False,False,False,False,0.9,81,60,3.9,52,False])
