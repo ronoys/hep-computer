@@ -1,7 +1,6 @@
-# To do the following you need to run command: pip install pybrain
+
 from pybrain.datasets.classification import ClassificationDataSet
-# below line can be replaced with the algorithm of choice e.g.
-# from pybrain.optimization.hillclimber import HillClimber
+
 from pybrain.optimization.populationbased.ga import GA
 from pybrain.tools.shortcuts import buildNetwork
 file = open('C:/Users/ronoy/OneDrive/Documents/Hepatitis/data.csv')
